@@ -19,7 +19,7 @@ export class ProductDetailsPage {
     console.log(this.product);
 
     this.WooCommerce = WC({
-      url:"http://localhost/deck",
+      url:"http://appstore.redlinks.com.ec",
       consumerKey:"ck_e03dd810e04c89514d29a2793fc2accf3e10ddfc",
       consumerSecret:"cs_b833981539c5449ac8ad62a6db57b5a27f59b1cd"
     });
