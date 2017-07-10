@@ -20,9 +20,9 @@ export class Signup {
     this.billing_shipping_same = false;
 
     this.WooCommerce = WC({
-      url:"http://www.medicma.com",
-      consumerKey:"ck_499ec0b256d56f01e864f8fe7909b26bb3590666",
-      consumerSecret:"cs_3c84f6cb05983942a9c906b295c1500afb5c7210"
+      url:"http://store.gustavodecker.com",
+      consumerKey:"ck_f95608de7e483733b0bc55d8f68aeeefbaac6ee2",
+      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca"
     });
   }
 
