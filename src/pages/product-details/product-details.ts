@@ -19,9 +19,9 @@ export class ProductDetailsPage {
     console.log(this.product);
 
     this.WooCommerce = WC({
-      url:"http://appstore.redlinks.com.ec",
-      consumerKey:"ck_e03dd810e04c89514d29a2793fc2accf3e10ddfc",
-      consumerSecret:"cs_b833981539c5449ac8ad62a6db57b5a27f59b1cd"
+      url: "http://store.gustavodecker.com",
+      consumerKey:"ck_f95608de7e483733b0bc55d8f68aeeefbaac6ee2",
+      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca"
     });
     this.WooCommerce.getAsync('products/'+this.product.id+'/reviews').then((data)=>{
       this.reviews = JSON.parse(data.body).product_reviews;
