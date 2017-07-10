@@ -20,9 +20,9 @@ export class Signup {
     this.billing_shipping_same = false;
 
     this.WooCommerce = WC({
-      url:"http://store.gustavodecker.com",
+      url: "http://store.gustavodecker.com",
       consumerKey:"ck_f95608de7e483733b0bc55d8f68aeeefbaac6ee2",
-      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca",
+      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca"
     });
   }
 
@@ -119,9 +119,9 @@ export class Signup {
       }
 
       if(this.billing_shipping_same){
-        this.newUser.shipping_address = this.newUser.billing_address;
+        this.newUser.shipping_address = this.newUser.shipping_address;
       }
-      console.log(customerData);
+
       this.WooCommerce.postAsync('customers', customerData).then( (data) => {
 
         let response = (JSON.parse(data.body));

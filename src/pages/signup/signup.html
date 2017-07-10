@@ -6,9 +6,11 @@
 
 </ion-header>
 
+
 <ion-content>
   <ion-list>
     <ion-item-divider color="danger">Personal Details</ion-item-divider>
+
     <ion-item>
       <ion-label>First Name</ion-label>
       <ion-input type="text" [(ngModel)]="newUser.first_name"></ion-input>
@@ -49,18 +51,15 @@
     <ion-item>
       <ion-label>Country</ion-label>
       <ion-select [(ngModel)]="newUser.billing_address.country">
-        <ion-option value="India" selected="true">India</ion-option>
+        <ion-option value="Ecuador" selected="true">Ecuador</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>State</ion-label>
       <ion-select [(ngModel)]="newUser.billing_address.state">
-        <ion-option value="New Delhi" selected="true">New Delhi</ion-option>
-        <ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
-        <ion-option value="Maharashtra">Maharashtra</ion-option>
-        <ion-option value="Tamil Nadu">Tamil Nadu</ion-option>
-        <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>
+        <ion-option value="Guayaquil" selected="true">Guayas</ion-option>
+        <ion-option value="Samborondón">Santa Elena</ion-option>
       </ion-select>
     </ion-item>
 
@@ -100,18 +99,15 @@
       <ion-item *ngIf="!billing_shipping_same">
         <ion-label>Country</ion-label>
         <ion-select [(ngModel)]="newUser.shipping_address.country">
-          <ion-option value="India" selected="true">India</ion-option>
+          <ion-option value="Ecuador" selected="true">Ecuador</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item *ngIf="!billing_shipping_same">
         <ion-label>State</ion-label>
         <ion-select [(ngModel)]="newUser.shipping_address.state">
-          <ion-option value="New Delhi" selected="true">New Delhi</ion-option>
-          <ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
-          <ion-option value="Maharashtra">Maharashtra</ion-option>
-          <ion-option value="Tamil Nadu">Tamil Nadu</ion-option>
-          <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>
+          <ion-option value="Guayaquil" selected="true">Guayas</ion-option>
+          <ion-option value="Samborondón">Santa Elena</ion-option>
         </ion-select>
       </ion-item>
 
