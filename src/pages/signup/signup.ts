@@ -22,7 +22,8 @@ export class Signup {
     this.WooCommerce = WC({
       url:"http://store.gustavodecker.com",
       consumerKey:"ck_f95608de7e483733b0bc55d8f68aeeefbaac6ee2",
-      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca"
+      consumerSecret:"cs_15f47b7d609db08b8d9f5e4a2f2c282586d4c0ca",
+      mode: 'cors'
     });
   }
 
