@@ -10,6 +10,9 @@ import { ProductsByCategoryPage } from '../pages/products-by-category/products-b
 import { ProductDetailsPage } from '../pages/product-details/product-details';
 import { CartPage } from '../pages/cart/cart';
 import { Signup } from '../pages/signup/signup';
+import { Login } from '../pages/login/login';
+
+import { HttpModule } from "@angular/http";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,10 +25,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductsByCategoryPage,
     ProductDetailsPage,
     CartPage,
-    Signup
+    Signup,
+    Login
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -37,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductsByCategoryPage,
     ProductDetailsPage,
     CartPage,
-    Signup
+    Signup,
+    Login
   ],
   providers: [
     StatusBar,
