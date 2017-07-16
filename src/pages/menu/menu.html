@@ -20,7 +20,8 @@
         <p> {{category.description}} </p>
       </ion-item>
 
-      <ion-item (click)="openPage('signup')" menuClose>
+      <ion-item-divider color='danger'>Account</ion-item-divider>
+      <ion-item (click)="openPage('signup')" menuClose *ngIf="!loggedIn">
         <ion-icon name="md-clipboard" item-left large></ion-icon>
         <h2>Sign Up</h2>
         <p>For a new account</p>
@@ -49,7 +50,7 @@
         <h2>Logout</h2>
         <p>of your Account</p>
       </ion-item>
-      
+
     </ion-list>
   </ion-content>
 
