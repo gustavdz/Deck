@@ -99,6 +99,7 @@ export class Menu {
       this.storage.remove("userLoginInfo").then(()=>{
         this.user = {};
         this.loggedIn = false;
+        console.log("user logout...");
       })
     }
   }

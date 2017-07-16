@@ -51,14 +51,16 @@
     <ion-item>
       <ion-label>Country</ion-label>
       <ion-select [(ngModel)]="newUser.billing_address.country">
-        <ion-option value="Ecuador" selected="true">Ecuador</ion-option>
+        <ion-option value="" selected="true">Seleccione...</ion-option>
+        <ion-option value="Ecuador">Ecuador</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>State</ion-label>
       <ion-select [(ngModel)]="newUser.billing_address.state">
-        <ion-option value="Guayas" selected="true">Guayas</ion-option>
+        <ion-option value="" selected="true">Seleccione...</ion-option>
+        <ion-option value="Guayas">Guayas</ion-option>
         <ion-option value="Santa Elena">Santa Elena</ion-option>
       </ion-select>
     </ion-item>
@@ -99,14 +101,16 @@
       <ion-item *ngIf="!billing_shipping_same">
         <ion-label>Country</ion-label>
         <ion-select [(ngModel)]="newUser.shipping_address.country">
-          <ion-option value="Ecuador" selected="true">Ecuador</ion-option>
+          <ion-option value="" selected="true">Seleccione...</ion-option>
+          <ion-option value="Ecuador">Ecuador</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item *ngIf="!billing_shipping_same">
         <ion-label>State</ion-label>
         <ion-select [(ngModel)]="newUser.shipping_address.state">
-          <ion-option value="Guayas" selected="true">Guayas</ion-option>
+          <ion-option value="" selected="true">Seleccione...</ion-option>
+          <ion-option value="Guayas">Guayas</ion-option>
           <ion-option value="Santa Elena">Santa Elena</ion-option>
         </ion-select>
       </ion-item>

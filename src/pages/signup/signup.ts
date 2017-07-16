@@ -86,6 +86,9 @@ export class Signup {
         customer : {}
       }
 
+      if(this.billing_shipping_same){
+        this.newUser.shipping_address = this.newUser.billing_address;
+      }
       customerData.customer = {
         "email": this.newUser.email,
         "first_name": this.newUser.first_name,
@@ -114,12 +117,9 @@ export class Signup {
           "city": this.newUser.shipping_address.city,
           "state": this.newUser.shipping_address.state,
           "postcode": this.newUser.shipping_address.postcode,
-          "country": this.newUser.shipping_address.country
+          "country": this.newUser.shipping_address.country,
+          "phone": this.newUser.shipping_address.phone
         }
-      }
-
-      if(this.billing_shipping_same){
-        this.newUser.shipping_address = this.newUser.shipping_address;
       }
 
       this.WooCommerce.postAsync('customers', customerData).then( (data) => {

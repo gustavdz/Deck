@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { CheckoutPage } from "../checkout/checkout";
+import { Login } from "../login/login";
 
 @Component({
   selector: 'page-cart',
@@ -21,7 +23,7 @@ export class CartPage {
         this.cartItems = data;
         console.log(this.cartItems);
 
-        if(this.cartItems.length > 0){
+        if(this.cartItems.length > 0 && this.cartItems != null){
           this.cartItems.forEach((item, index)=>{
             this.total = this.total + (item.product.price * item.qty)
           })
@@ -52,6 +54,16 @@ export class CartPage {
 
   closeModal(){
     this.viewCtrl.dismiss();
+  }
+
+  checkout(){
+    this.storage.get("userLoginInfo").then((data)=>{
+      if(data != null){
+        this.navCtrl.push(CheckoutPage);
+      }else{
+        this.navCtrl.push(Login, {next: CheckoutPage});
+      }
+    })
   }
 
 }

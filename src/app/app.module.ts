@@ -11,6 +11,7 @@ import { ProductDetailsPage } from '../pages/product-details/product-details';
 import { CartPage } from '../pages/cart/cart';
 import { Signup } from '../pages/signup/signup';
 import { Login } from '../pages/login/login';
+import { CheckoutPage } from '../pages/checkout/checkout';
 
 import { HttpModule } from "@angular/http";
 
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductDetailsPage,
     CartPage,
     Signup,
-    Login
+    Login,
+    CheckoutPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductDetailsPage,
     CartPage,
     Signup,
-    Login
+    Login,
+    CheckoutPage
   ],
   providers: [
     StatusBar,
