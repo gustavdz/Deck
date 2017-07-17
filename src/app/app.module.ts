@@ -13,8 +13,10 @@ import { Signup } from '../pages/signup/signup';
 import { Login } from '../pages/login/login';
 import { CheckoutPage } from '../pages/checkout/checkout';
 
+
 import { HttpModule } from "@angular/http";
 import { PayPal } from "@ionic-native/paypal";
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -52,7 +54,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    Paypal,
+    PayPal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
